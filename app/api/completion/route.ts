@@ -19,14 +19,14 @@ const ratelimit = redis
   : false;
 
 export async function POST(req: Request) {
-  // if (ratelimit) {
-  //   const ip = req.headers.get("x-real-ip") ?? "local";
-  //   const rl = await ratelimit.limit(ip);
+  if (ratelimit) {
+    const ip = req.headers.get("x-real-ip") ?? "local";
+    const rl = await ratelimit.limit(ip);
 
-  //   if (!rl.success) {
-  //     return new Response("Rate limit exceeded", { status: 429 });
-  //   }
-  // }
+    if (!rl.success) {
+      return new Response("Rate limit exceeded", { status: 429 });
+    }
+  }
 
   if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY === "") {
     return new Response(
