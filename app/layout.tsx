@@ -37,13 +37,13 @@ export default function RootLayout({
           </p>
           <p>
             Built with <A href="https://sdk.vercel.ai">Vercel AI SDK</A> &{" "}
-            <A href="https://openai.com/">OpenAI</A>
+            <A href="https://openai.com/">OpenAI GPT-4o</A>
           </p>
           <p>
-            <A href="https://github.com/xiaoluoboding/img2txt2audio">source</A>{" "}
+            <A href="https://github.com/xiaoluoboding/img2txt2audio">Source</A>{" "}
             /{" "}
             <A href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fxiaoluoboding%2Fimg2txt2voice&env=OPENAI_API_KEY,UPSTASH_REDIS_REST_URL,UPSTASH_REDIS_REST_TOKEN&demo-title=img2txt2audio&demo-description=Image%20to%20text%20to%20audio%2C%20accurate%2C%20fast.&demo-url=https%3A%2F%2Fimg2txt2audio.vercel.app%2F&demo-image=https%3A%2F%2Fimg2txt2audio.vercel.app%2Fopengraph-image.png&skippable-integrations=1">
-              deploy
+              Deploy
             </A>
           </p>
         </footer>
