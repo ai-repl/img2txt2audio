@@ -19,7 +19,7 @@ const ratelimit = redis
   : false;
 
 export async function POST(req: Request) {
-  if (ratelimit) {
+  if (process.env.NODE_ENV === "production" && ratelimit) {
     const ip = req.headers.get("x-real-ip") ?? "local";
     const rl = await ratelimit.limit(ip);
 

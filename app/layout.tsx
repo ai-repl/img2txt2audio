@@ -4,10 +4,12 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/react";
-import { slogan } from "@/lib/constants";
+
+import { siteTitle, slogan } from "@/lib/constants";
+import Logo from "@/components/Logo";
 
 export const metadata: Metadata = {
-  title: "img2txt2audio",
+  title: siteTitle,
   description: slogan,
 };
 
@@ -21,8 +23,11 @@ export default function RootLayout({
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} font-mono bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white px-3 lg:px-10 py-4 lg:py-10 min-h-dvh flex flex-col`}
       >
-        <h1 className="font-semibold text-center text-2xl bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-200 from-neutral-950 to-neutral-800 bg-clip-text text-transparent select-none">
-          img2txt2audio
+        <h1 className="flex items-center justify-center gap-2 font-semibold text-center text-2xl bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-200 from-neutral-950 to-neutral-800 bg-clip-text text-transparent select-none">
+          <Logo size={32} />
+          <span className="bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-700/90 from-neutral-950 to-neutral-800 bg-clip-text">
+            {siteTitle}
+          </span>
         </h1>
 
         <main className="grow flex flex-col lg:flex-row gap-6 py-4 lg:py-10">

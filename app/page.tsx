@@ -72,6 +72,7 @@ export default function Home() {
     }
 
     setBlobURL(URL.createObjectURL(file));
+    setVoiceSrc("");
     setLoadingTTS(true);
     setFinished(false);
     complete(base64);
