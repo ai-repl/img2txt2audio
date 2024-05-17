@@ -8,9 +8,8 @@ import { toast } from "sonner";
 import Image from "next/image";
 import { track } from "@vercel/analytics";
 
-import { isSupportedImageType } from "@/app/utils";
 import { slogan } from "@/lib/constants";
-import { copy } from "@/lib";
+import { copy, isSupportedImageType, toBase64 } from "@/lib";
 
 export default function Home() {
   const [isDraggingOver, setIsDraggingOver] = useState(false);
@@ -26,7 +25,8 @@ export default function Home() {
       setBlobURL(null);
     },
     onFinish: (prompt: string, completion: string) => {
-      handleGenerateVoice(completion);
+      const [_, description, text] = completion.split("▲");
+      handleGenerateVoice(description);
       setFinished(true);
     },
   });
@@ -239,18 +239,6 @@ export default function Home() {
       )}
     </>
   );
-}
-
-function toBase64(file: File | Blob): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      if (typeof reader.result !== "string") return;
-      resolve(reader.result);
-    };
-    reader.onerror = (error) => reject(error);
-  });
 }
 
 function Section({
