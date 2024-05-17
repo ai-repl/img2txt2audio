@@ -18,7 +18,7 @@ export async function POST(req: Request): Promise<Response> {
 
   const response = await openai.audio.speech.create({
     model,
-    audio,
+    voice: audio,
     input: prompt,
   });
 
