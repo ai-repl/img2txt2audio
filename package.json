@@ -1,5 +1,6 @@
 {
 	"name": "img2txt2audio",
+	"description": "Image to text to audio, accurate, fast.",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
