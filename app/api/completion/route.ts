@@ -2,9 +2,9 @@ import OpenAI from "openai";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 import { Ratelimit } from "@upstash/ratelimit";
 
-import { isSupportedImageType } from "@/app/utils";
 import { decodeBase64Image } from "@/lib/image";
 import { redis } from "@/lib/redis";
+import { isSupportedImageType } from "@/lib";
 
 export const runtime = "edge";
 
