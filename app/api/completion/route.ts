@@ -67,7 +67,8 @@ export async function POST(req: Request) {
           {
             type: "text",
             text: `Begin each of the following with a triangle symbol (▲ U+25B2):
-            	Tell me What's in this image?, please analyze the image and provide a detailed description, Do not describe or extract text in the description.
+            	Tell me What's in this image?, please analyze the image and provide a detailed description, Do not describe or extract text in the description;
+              and please try to analyze which style or filter was used in the image, e.g. cinematography, portraiture, vintage film, and so on.
             	Second, the text extracted from the image, with newlines where applicable. Un-obstruct text if it is covered by something, to make it readable.
             	If there is no text in the image, only respond with the description. Do not include any other information.
             	Example: ▲ Lines of code in a text editor.▲ const x = 5; const y = 10; const z = x + y; console.log(z);
