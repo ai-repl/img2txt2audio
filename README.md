@@ -7,6 +7,6 @@ Image to text to audio, accurate, fast. Built with the [Vercel AI SDK](https://s
 ## Developing
 
 - Clone the repository
-- Create a `.env.local` file with `OPENAI_API_KEY=your-api-key` where `your-api-key` is your OPENAI API key from [[console.anthropic.com](https://platform.openai.com/api-keys)](https://platform.openai.com/api-keys).
+- Create a `.env.local` file with `OPENAI_API_KEY=your-api-key` where `your-api-key` is your OPENAI API key from [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys).
 - Run `pnpm install` to install dependencies.
 - Run `pnpm dev` to start the development server.
